@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block content %}
+<center>
+    <form method="POST">
+        {% csrf_token %}
+        
+        {{error}}
+
+        <label for="name">First_name:</label>
+        <input type="text" name="first_name" placeholder="first_name"><br><br>
+
+        <label for="username"> Last_name:</label>
+        <input type="text" name="last_name" placeholder="last_name"><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="username"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="enter your email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="enter your password"><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</center>
+{% endblock %}

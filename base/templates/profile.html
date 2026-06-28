@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+<div id="pro">
+    <center>
+        <h1>profile</h1>
+
+        <h2>{{data.username}}</h2>
+        <h2>{{data.first_name}}</h2>
+        <h2>{{data.last_name}}</h2>
+        <h2>{{data.email}}</h2>
+        <h2></h2>
+        <button><a href="{% url 'logout' %}">Logout</a></button>
+    </center>
+</div>
+{% endblock %}

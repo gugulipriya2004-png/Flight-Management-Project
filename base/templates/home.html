@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% block content %}
+<center>
+    <form action="">
+    <b><label for="POST">From</label></b>
+    <input type="text" name='To' placeholder="Enter Departure City">
+
+    <b><label for="">To</label></b>
+    <input type="text" name="from" placeholder="Enter Destination City"><br><br>
+
+    <button type="search" id="search">Search</button>
+    <hr>
+    </b><h1>Available Flights</h1></b><br><br>
+    {% for i in data %}
+    <div id="box">
+        <div id="box1">
+            <h2>{{i.model}}</h2>
+
+            <h4>{{i.name}}|Flight No:{{i.no}}</h4>
+            <h4><b>From:</b> {{i.From}}</h4>
+            <h4><b>To:</b>{{i.To}}</h4>
+        </div>
+    
+        <div id="box2">
+            <h4><b>Departure:</b>{{i.Departure}}</h4>
+            <h4><b>Date:</b>{{i.Date}}</h4>
+            <h4><b>Price:</b>{{i.Price}}</h4>
+            <button><a href="{% url 'book' i.id %}">Book Now</a></button>
+        </div>
+    </div>
+
+    <br><br>
+
+    {% endfor %}
+    </form>
+    </center>
+{% endblock %}

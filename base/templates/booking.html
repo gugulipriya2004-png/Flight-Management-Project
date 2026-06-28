@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+{% for i in now %}
+<center>
+<div class="box6">
+    <div id="box9">
+    <div id="one">
+        <h3>{{i.your_name}}</h3>
+        <h4>Adhaar:{{i.Adhaar_no}}</h4>
+        <h4>Age:{{i.age}}</h4>
+        <h4>seat_class:{{i.seat_class}}</h4>
+        <h4>seat_no:{{i.seat_no}}</h4>
+    </div>
+    <div id="two">
+        <h3>{{i.name}}</h3>
+        <h4>{{i.model}}|{{i.no}}</h4>
+        <h4>From:{{i.From}}</h4>
+        <h4>To:{{i.To}}</h4>
+        <h4>Email:{{i.Email}}</h4>
+    </div>
+    <div id="three">
+        <h3>Phone:{{i.Phone_no}}</h3>
+        <h4>Departure:{{i.Departure}}</h4>
+        <h4>Date:{{i.Date}}</h4>
+        <h4>Price:{{i.Price}}</h4>
+    </div>
+    </div>
+    <div id="box8">
+        <button><a href="{% url 'update' i.id %}">update details</a></button><br><br>
+        <a href="{% url 'clear' i.id %}">
+            <button>Clear</button></a>
+    </div>
+</div>
+
+<br> <br>
+</center>
+{% endfor %}
+{% endblock %}

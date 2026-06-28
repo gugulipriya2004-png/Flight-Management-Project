@@ -1,0 +1,77 @@
+{% extends 'main.html' %}
+{% block content %}
+<div id="box3">
+   <form action="" method="POST">
+      {% csrf_token %}
+     <h1>🛬Plane Ticket Bookig From</h1>
+     <h3>Flight Details</h3>
+     <div id="line">
+
+     </div><br><br>
+
+        <div id="box4">
+            <label for="">Flight Company:</label><br>
+            <input type="text"name='model' value="{{data.model}}" readonly><br><br>
+
+            <label for="">Flight Name:</label><br>
+            <input type="text" name="name" value="{{data.name}}" readonly><br><br>
+
+            <label for="">Flight No:</label><br>
+            <input type="text" name="no" value="{{data.no}}" readonly><br><br>
+
+            <label for="">From:</label><br>
+            <input type="text" name="From" value="{{data.From}}" readonly><br><br>
+
+            <label for="">To:</label><br>
+            <input type="text" name="To" value="{{data.To}}" readonly><br><br>
+
+            <label for="">Departure Time:</label><br>
+            <input type="time" name="Departure" value="{{data.Departure}}" readonly><br><br>
+
+            <label for="">Date:</label><br>
+            <input type="text" name="Date" value="{{data.Date}}" readonly><br><br>
+
+            <label for="">Price:</label><br>
+            <input type="text" name="Price" value="{{data.Price}}" readonly><br><br>
+        </div><br><br>
+
+        <h3>Passangers Details</h3>
+        <div id="line">
+
+     </div><br><br>
+
+         <div id="box4">
+            <label for="">Your Name:</label><br>
+            <input type="text" name="your_name"><br><br>
+
+            <label for="">Email:</label><br>
+            <input type="text" name="Email"><br><br>
+
+            <label for="">Phone Number:</label><br>
+            <input type="text" name="Phone_no"><br><br>
+
+            <label for="">Adhaar Number:</label><br>
+            <input type="text" name="Adhaar_no"><br><br>
+
+            <label for="">Age:</label><br>
+            <input type="text" name="age"><br><br>
+
+            <label for="">Seat Class:</label><br>
+            <select name="seat_class" >
+               <option value="" hidden>Select seat class</option>
+               <option value=" First"> First</option>
+               <option value=" Second"> Second</option>
+               <option value=" Third"> Third</option>
+            </select><br><br>
+
+            <label for="">Seat Number:</label><br>
+            <input type="text" name="seat_no"><br><br>
+         <center>
+         <div id="box5">
+            <button type="submit" id="book"> Book Ticket</button>
+        </div>
+        </center>
+      </div>
+   </form> 
+   </div>
+{% endblock %}

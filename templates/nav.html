@@ -1,0 +1,17 @@
+{% block content %}
+
+
+    <nav id="nav">
+    {% if user.is_authenticated %} 
+    <!-- its user not request.user cause we are not fetching the data from session storage we are fetching it from db  -->
+        <button><a href="{% url 'home' %}">Home</a></button>
+        <button><a href="{% url 'booking' %}">Booking</a></button>
+        <button><a href="{% url 'history' %}">History</a></button>
+        <button><a href="{% url 'profile' %}">Profile</a></button>
+        <button><a href="{% url 'support' %}">Support</a></button>
+    {% else %}
+        <button><a href="{% url 'login' %}">Login</a></button>
+        <button><a href="{% url 'about' %}">About</a></button>
+    {% endif %}
+    </nav>
+{% endblock %}
